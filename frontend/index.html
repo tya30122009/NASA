@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickX | SPHEREx Blink Comparator</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <div class="logo-group">
+                <span>QuickX</span>
+                <span class="logo-badge">Beta</span>
+            </div>
+            <div id="status-bar"></div>
+        </header>
+
+        <aside class="glass-panel sidebar">
+            <h3>Explore</h3>
+            <input type="text" id="obj-search" placeholder="Enter target (e.g. M51)">
+            <button class="glass-btn glass-btn-prominent" id="search-btn">Search</button>
+            <div id="obs-list"></div>
+        </aside>
+
+        <main id="viewer-container">
+            <canvas id="blink-canvas"></canvas>
+            <div id="meta-overlay" class="frame-meta-badge">
+                <div id="badge-obsid" class="text-cyan-400 font-mono text-[10px]"></div>
+                <div id="badge-date" class="text-white text-[10px]"></div>
+                <div id="badge-wave" class="text-slate-400 text-[10px]"></div>
+            </div>
+            <div id="floating-controls">
+                <div class="segmented-control" id="mode-switcher">
+                    <button class="segmented-btn active" data-mode="blink">Blink</button>
+                    <button class="segmented-btn" data-mode="flicker">Flicker</button>
+                    <button class="segmented-btn" data-mode="difference">Diff</button>
+                </div>
+                <button class="glass-btn" id="play-btn">Play</button>
+                <button class="glass-btn" id="color-btn" aria-pressed="false"
+                        title="Tint each frame by its LVF wavelength (false colour)">Color</button>
+            </div>
+        </main>
+
+        <aside class="glass-panel inspector">
+            <h3>Inspector</h3>
+            <div id="frame-details"></div>
+            <div id="spectrum-plot"></div>
+        </aside>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
