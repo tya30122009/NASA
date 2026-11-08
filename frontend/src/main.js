@@ -1,5 +1,9 @@
+import { inject } from '@vercel/analytics';
 import { QuickXClient, Viewer } from './app.js';
 import { renderSpectrum } from './viz.js';
+
+// Initialize Vercel Web Analytics
+inject();
 
 const client = new QuickXClient();
 const viewer = new Viewer(document.getElementById('blink-canvas'));
