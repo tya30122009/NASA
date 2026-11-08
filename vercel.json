@@ -8,10 +8,6 @@
     "frontend": {
       "root": "frontend",
       "framework": "vite"
-    },
-    "rollup": {
-      "root": "frontend/rollup",
-      "framework": "vite"
     }
   },
   "rewrites": [
